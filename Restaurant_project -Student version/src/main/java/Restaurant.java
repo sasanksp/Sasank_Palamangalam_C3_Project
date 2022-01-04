@@ -1,4 +1,3 @@
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,4 +63,12 @@ public class Restaurant {
         return name;
     }
 
+    public double orderValue(List<Item> listOfItems){
+        double sumOfOrder = 0;
+
+        for (Item myItem : listOfItems) {
+            sumOfOrder += myItem.getPrice();
+        }
+        return sumOfOrder;
+    }
 }
